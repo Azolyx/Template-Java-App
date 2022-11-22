@@ -37,7 +37,7 @@ public class AppManager {
     }
 
     public void tick() {
-        engine.tick();
+        
     }
 
     public void stop() {
