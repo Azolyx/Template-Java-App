@@ -9,11 +9,13 @@ public class AppManager {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         windowManager.init("Template App", screenSize.width, screenSize.height, 3);
         running = true;
-        thread = new Thread(this::start);
+        thread = new Thread(this::ready);
         thread.start();
     }
 
-    public void start() {
+    public void ready() {
+        start();
+
         int fps = 60;
         long frameLength = 1000 / fps;
         long lastFrame = System.currentTimeMillis();
@@ -30,15 +32,17 @@ public class AppManager {
         }
     }
 
+    public void start() {
+
+    }
+
     public void tick() {
-        windowManager.drawRect(Color.BLACK, true, 100, 100, 100, 100);
-        windowManager.drawRect(Color.BLACK, false, 10, 300, 100, 100, 100);
-        
-        windowManager.drawScreen();
+        engine.tick();
     }
 
     public void stop() {
         running = false;
         thread.interrupt();
+        windowManager.appWindow.dispose();
     }
 }

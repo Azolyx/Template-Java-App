@@ -13,7 +13,7 @@ public class WindowObject {
     public boolean fill;
     public int lineWidth, x, y, x1, x2, y1, y2, width, height, style, size;
     public int[] xPoints, yPoints;
-    public  String fontName, text;
+    public String fontName, text;
     public BufferedImage image;
 
     WindowObject(int id, Color color, boolean fill, int x, int y, int width, int height) {
