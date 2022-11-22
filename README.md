@@ -37,4 +37,4 @@ You start by making a new WindowManager class. Then run init() on the class to c
     
 ## Notes
 
-- Whenever you draw a object wihthout it being filled you have to specify a linewidth
+- Whenever you draw a object without it being filled you have to specify a linewidth
