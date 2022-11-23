@@ -7,8 +7,8 @@ public class WindowManager {
     public AppWindow appWindow;
     public LinkedList<WindowObject> instructions = new LinkedList<>();
 
-    public void init(String title, int width, int height, int numBuffers) {
-        appWindow = new AppWindow(title, width, height, numBuffers);
+    public void init(AppManager appManager, String title, int width, int height, int numBuffers) {
+        appWindow = new AppWindow(appManager, title, width, height, numBuffers);
     }
 
     public void drawRect(Color color, boolean fill, int x, int y, int width, int height) {
