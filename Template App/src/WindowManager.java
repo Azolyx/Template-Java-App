@@ -86,8 +86,8 @@ public class WindowManager {
             case WindowObject.POLYGON:
                 g.setColor(instruction.color);
                 g.setStroke(new BasicStroke(instruction.lineWidth));
-                if (instruction.fill) { g.drawPolygon(instruction.xPoints, instruction.yPoints, instruction.xPoints.length); }
-                else { g.fillPolygon(instruction.xPoints, instruction.xPoints, instruction.xPoints.length); }
+                if (instruction.fill) { g.fillPolygon(instruction.xPoints, instruction.yPoints, instruction.xPoints.length); }
+                else { g.drawPolygon(instruction.xPoints, instruction.yPoints, instruction.xPoints.length); }
                 break;
             case WindowObject.TEXT:
                 g.setColor(instruction.color);
