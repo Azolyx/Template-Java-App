@@ -7,9 +7,8 @@ public class AppManager {
     public Thread thread;
     public boolean running = false;
 
-    public void init() {
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        windowManager.init(this, "Template App", screenSize.width, screenSize.height, 3);
+    public void init(String appName, int screenWidth, int screenHeight, int numBuffers) {
+        windowManager.init(this, appName, screenWidth, screenHeight, numBuffers);
         running = true;
         thread = new Thread(this::ready);
         thread.start();
