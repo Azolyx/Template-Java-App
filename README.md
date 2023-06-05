@@ -13,7 +13,7 @@ This is a template app created in java that will create a new window and open it
 |:-----------:|:--------------------------------------------------------------------:|
 |Main         |The main class                                                        |
 |WindowManager|Controlls anything to do with the window.                             |
-|AppWindow    |Extends JFrame. Creates a new window when inisilized.                 |
+|AppWindow    |Extends JFrame. Creates a new window when initialized.                |
 |WindowObject |Anything that you can draw on the screen. e.g. Rect, Oval, String, etc|
 |App Manager  |Controlls the app and has the main loop.                              |
 
